@@ -52,7 +52,7 @@ const Analytics = () => {
   return (
     <>
       <Header />
-      <div className="d-flex flex-row flex-wrap">
+      <div className="container d-flex flex-row flex-wrap justify-content-center align-items-center my-3">
         {data?.map((record, i) => (
           <div
             className="card m-2 p-1"
