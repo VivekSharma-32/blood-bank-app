@@ -13,6 +13,10 @@ import Organisation from "./pages/Dashboard/Organisation";
 import Consumer from "./pages/Dashboard/Consumer";
 import Donation from "./pages/Dashboard/Donation";
 import Analytics from "./pages/Dashboard/Analytics";
+import HospitalList from "./pages/Admin/HospitalList";
+import DonarList from "./pages/Admin/DonarList";
+import OrgList from "./pages/Admin/OrgList";
+import AdminHome from "./pages/Admin/AdminHome";
 
 function App() {
   return (
@@ -24,6 +28,14 @@ function App() {
           element={
             <ProtectedRoute>
               <Homepage />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin"
+          element={
+            <ProtectedRoute>
+              <AdminHome />
             </ProtectedRoute>
           }
         />
@@ -43,6 +55,34 @@ function App() {
             </ProtectedRoute>
           }
         />
+
+        <Route
+          path="/donar-list"
+          element={
+            <ProtectedRoute>
+              <DonarList />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/hospital-list"
+          element={
+            <ProtectedRoute>
+              <HospitalList />
+            </ProtectedRoute>
+          }
+        />
+
+        <Route
+          path="/org-list"
+          element={
+            <ProtectedRoute>
+              <OrgList />
+            </ProtectedRoute>
+          }
+        />
+
         <Route
           path="/organisation"
           element={
